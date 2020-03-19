@@ -15,18 +15,7 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- task: CmdLine@2
-  inputs:
-    script: |
-      tzutil /s "Tokyo Standard Time"
-- task: UniversalPackages@0
-  inputs:
-    command: 'download'
-    downloadDirectory: '$(System.DefaultWorkingDirectory)'
-    feedsToUse: 'internal'
-    vstsFeed: '9ca203c0-90a9-4de3-ac80-827f278164d7'
-    vstsFeedPackage: 'c0bf0b34-08ad-4fc7-84eb-7449bfb3bd9c'
-    vstsPackageVersion: '1.0.1'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: publish

@@ -6,7 +6,6 @@
 trigger:
 - master
 
-
 pool:
   #name: Svr2008R2
   vmImage: 'vs2017-win2016'

@@ -6,12 +6,10 @@
 trigger:
 - master
 
-resources:
-- repo: self
 
 pool:
-  name: Svr2008R2
-  #vmImage: 'vs2017-win2016'
+  #name: Svr2008R2
+  vmImage: 'vs2017-win2016'
 
 variables:
   buildConfiguration: 'Release'

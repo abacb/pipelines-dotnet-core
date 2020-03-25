@@ -29,13 +29,3 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'myWebsiteName'
-
-- task: AzurePowerShell@5
-  inputs:
-    azureSubscription: 'Microsoft Azure 社内従量課金プラン (654a9193-925f-4796-8e8c-453df1d64676)'
-    ScriptType: 'InlineScript'
-    Inline: |
-      $a = az account show
-      write-host $a
-    FailOnStandardError: true
-    azurePowerShellVersion: 'LatestVersion'
